@@ -67,15 +67,11 @@ html, body {
     left: 0;
     top: 0;
     z-index: 50;
-
-    /* border: 2.5px solid yellow; */
 }
 .header__container {
     display: flex;
     min-height: 104px;
     align-items: center;
-
-    /* border: 2.5px solid green; */
 } 
 @media (max-width: 479px) {
     .header__container {
@@ -89,8 +85,6 @@ html, body {
 }
 .header__menu {
     margin-left: 133px; /* по БЭМ (Блок, Элемент, Модификатор) устанавливать сюда, а не в menu, хоть это одно и то же*/
-
-    /* border: 2.5px solid orange; */
 }
 @media (max-width: 992px) {
     .header__menu {
@@ -108,7 +102,7 @@ html, body {
     }
 }
 .menu {
-    /* padding: 5px 0px; */
+    padding: 5px 0px;
 }
 .menu__list {
     display: flex;
@@ -125,6 +119,7 @@ html, body {
 @media (max-width: 479px) {
     .menu__link {
         font-size: 18px; /*увеличить шрифт с 14px до 18px при размере экрана < 767px*/
+        color: #535353 /*При размере экрана < 479px сделать цвет текста темнее*/
     } 
 }
 
@@ -133,9 +128,7 @@ html, body {
 .page {
     flex: 1 1 auto; /*Привязать footer к низу страницы*/    
 }
-.page__main-block {
-
-}
+/* .page__main-block {} */
 
 /*--------------------MAIN-BLOCK--------------------------------------*/
 
@@ -143,7 +136,7 @@ html, body {
 .main-block {
     position: relative;
 }
-.main-block__container {}
+/* .main-block__container {} */
 .main-block__body {
     padding: 184px 0px 191px 0px;
     position: relative;
@@ -173,6 +166,11 @@ html, body {
     font-size: 20px;
     line-height: calc(30 / 20 *100%);
     color: #737373;
+}
+@media (max-width: 479px) {
+    .main-block__text {
+        color: #535353 /*При размере экрана < 479px сделать цвет текста темнее*/
+    }
 }
 .main-block__buttons {
     display: flex;
@@ -230,7 +228,4 @@ html, body {
 
 
 /*--------------------ПОДВАЛ--------------------------------------*/
-.footer {
-
-
-}
+/* .footer {} */
