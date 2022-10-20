@@ -148,21 +148,69 @@ html, body {
     padding: 184px 0px 191px 0px;
     position: relative;
     z-index: 2;  
+    max-width: 400px;
+}
+.main-block__body > *:not(:last-child) { /*установили отступ снизу ко всем элементам первого уровня вложенности, кроме последнего элемента*/
+    margin: 0px 0px 35px 0px;
+}
+@media (max-width: 992px) {
+    .main-block__body {
+        padding: 120px 0px 191px 0px; /*При размере экрана < 992px уменьшить отступ с 184px до 120px*/
+    }
 }
 .main-block__title {
     font-size: 58px;
     line-height: calc(80 / 58 * 100%);
+    letter-spacing: 0.2px;
     font-weight: 800;
-    max-width: 509px;
+}
+@media (max-width: 479px) {
+    .main-block__title {
+        font-size: 42px; /*При размере экрана < 479px уменьшить размер шрифта с 58px до 42px*/
+        text-align: center; /*При размере экрана < 479px title привязать по центру блока*/
+    }
 }
 .main-block__text {
+    font-size: 20px;
+    line-height: calc(30 / 20 *100%);
     color: #737373;
-    
 }
-.main-block__buttons {}
-.main-block__button {}
-.main-block__button {}
-.main-block__button_border {}
+.main-block__buttons {
+    display: flex;
+    flex-wrap: wrap; /*чтобы при сужении экрана, кнопки переносились одна под другую*/
+    margin: -10px 0px;
+}
+.main-block__button {
+    border-radius: 37px;
+    display: flex;
+    min-height: 48px;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.2px;
+    font-weight: 700;
+    text-align: center;
+    line-height: calc(28 / 14 * 100%);
+    padding: 5px 36px;
+    margin: 10px 0px;
+}
+@media (min-width: 479px) {
+    .main-block__button:not(:last-child){
+        margin-right: 10px;
+    }
+}
+@media (max-width: 479px){
+    .main-block__button {
+        flex: 1 1 auto; /*При размере экрана < 479px сделать кнопки по всей ширине блока*/
+    }
+}
+.main-block__button_orange {
+    background-color: #FF7B47;
+    color: #fff;
+}
+.main-block__button_border {
+    border: 1px solid #0D5C63;
+    color: #0D5C63;
+}
 .main-block__image {
     position: absolute;
     width: 100%;
@@ -170,10 +218,16 @@ html, body {
     top: 0;
     left: 0;
 }
-._ibg {
-    
+@media (max-width: 1440px) {
+    .main-block__image img{
+        object-position: right; /*При размере экрана < 1440px изображение привязать в правому краю*/
+    }
 }
-
+@media (max-width: 992px) {
+    .main-block__image img{ 
+        opacity: 0.5; /*При размере экрана < 992px изображение сделать полупрозрачным*/
+    }
+}
 
 
 /*--------------------ПОДВАЛ--------------------------------------*/
