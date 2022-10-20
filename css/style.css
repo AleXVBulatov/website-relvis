@@ -167,7 +167,6 @@ html, body {
 @media (max-width: 479px) {
     .main-block__title {
         font-size: 42px; /*При размере экрана < 479px уменьшить размер шрифта с 58px до 42px*/
-        text-align: center; /*При размере экрана < 479px title привязать по центру блока*/
     }
 }
 .main-block__text {
