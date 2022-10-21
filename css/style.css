@@ -137,6 +137,8 @@ html, body {
 }
 .page__advantages {
 }
+.page__practice {
+}
 
 /*--------------------HEADER-BLOCK--------------------------------------*/
 
@@ -371,7 +373,7 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     margin: 0px -15px;
-    
+
     /* border: 5px solid red; */
 }
 .advantages__column {
@@ -388,6 +390,9 @@ html, body {
     .advantages__column {
         flex: 0 1 100%;
         margin-bottom: 15px 
+    }
+    .advantages__column:last-child {
+        margin-bottom: 0px 
     }
 }
 .advantages__item {
@@ -421,8 +426,97 @@ html, body {
     /* white-space: nowrap;  */
 }
 
+/*--------------------SECTION PRACTICE--------------------------------------*/
+
+
+
+.practice {
+    padding: 80px 0px;
+}
+@media (max-width: 992px) {
+    .practice {
+        padding: 40px 0px;
+    }
+}
+@media (max-width: 479px) {
+    .practice {
+        padding: 20px 0px;
+    }
+}
+.practice__container {
+}
+.practice__headeг {
+    margin: 45px 0px;
+}
+.practice__body {
+    margin: 0px -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.practice__column {
+    padding: 0px 15px;
+    flex: 0 1 25%;    
+}
+@media (max-width: 992px) {
+    .practice__column {
+        flex: 0 1 50%; 
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 479px) {
+    .practice__column {
+        flex: 0 1 100%; 
+        margin-bottom: 15px;
+    }
+    .practice__column:last-child{
+        margin-bottom: 0px;
+    }
+}
+.practice__item {
+
+}
+.item-practice {
+    background-color: #fff;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07); 
+    display: flex; /*Чтобы картинки были привязаны к низу блока*/
+    height: 100%; /*Чтобы картинки были привязаны к низу блока*/
+    flex-direction: column; /*Чтобы картинки были привязаны к низу блока*/
+}
+.item-practice__content {
+    padding: 30px;
+    flex: 1 1 auto; /*Чтобы картинки были привязаны к низу блока*/
+}
+.item-practice__link {
+    color: inherit;
+    display: inline-block; /*чтобы ссылку сделать из строки блоком, чтобы далее добавить ей отступ */
+    margin: 0px 0px 15px 0px;
+}
+.item-practice__link:hover {
+    text-decoration: underline;
+}
+.item-practice__title {
+    letter-spacing: 0.1px;
+    font-size: 16px;
+    line-height: calc(24 / 16 * 100%);
+    font-weight: 700;
+}
+.item-practice__text {
+    letter-spacing: 0.2px;
+    font-size: 14px;
+    line-height: calc(20 / 14 * 100%);
+    font-weight: 500;
+    color: #737373;
+}
+.item-practice__image{
+    display: block;
+    padding: 60% 0% 0% 0px; /*Результат деления сторон картинки 138/230*100%*/
+}
+
 
 
 
 /*--------------------ПОДВАЛ--------------------------------------*/
 /* .footer {} */
+
+
+/* border: 5px solid red  */
