@@ -27,6 +27,7 @@ html, body {
     color: #252B42;
     font-family: montserrat;
     font-weight: 500;
+    background-color: #FAFAFA;
 }
 
 /*--------------------ОБЕРТКА--------------------------------------*/
@@ -74,7 +75,7 @@ html, body {
 } 
 @media (max-width: 479px) {
     .header__container {
-        min-height: 70px; /*Уменьшить отступ co 133px до 80px при размере экрана < 992px*/
+        min-height: 70px; /*При ширине экрана < 479px уменьшить высоту header с 104px до 70px*/
     }
 }
 .header__logo {
@@ -113,7 +114,7 @@ html, body {
 .menu__link {
     color: #737373;
     font-weight: 600;
-    line-height: calc(24 / 14 * 100%); /*line-height: 24px / 14px * 100% = 171%*/
+    line-height: calc(24 / 14 * 100%); 
 }
 @media (max-width: 479px) {
     .menu__link {
@@ -133,6 +134,39 @@ html, body {
     position: relative;
     z-index: 2;
     margin: -111px 0px 0px 0px;
+}
+.page__advantages {
+}
+
+/*--------------------HEADER-BLOCK--------------------------------------*/
+
+.header-block {
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+.header-block__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: calc(57 / 40 * 100%);
+}
+.header-block__title:not(:last-child) {
+    margin: 0px 0px 10px 0px; /*В случае если sub-title не будет, отступ не будет добавлен*/
+}
+@media (max-width: 992px) {
+    .header-block__title {
+        font-size: 36px;
+    }
+}
+@media (max-width: 479px) {
+    .header-block__title {
+        font-size: 32px;
+    }
+}
+.header-block__sub-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(20 / 14 * 100%);
+    color: #737373;
 }
 
 /*--------------------MAIN-BLOCK--------------------------------------*/
@@ -164,12 +198,12 @@ html, body {
 }
 @media (max-width: 479px) {
     .main-block__title {
-        font-size: 42px; /*При размере экрана < 479px уменьшить размер шрифта с 58px до 42px*/
+        font-size: 44px; /*При размере экрана < 479px уменьшить размер шрифта с 58px до 42px*/
     }
 }
 .main-block__text {
     font-size: 20px;
-    line-height: calc(30 / 20 *100%);
+    line-height: calc(30 / 20 * 100%);
     color: #737373;
 }
 @media (max-width: 479px) {
@@ -254,12 +288,10 @@ html, body {
         flex: 0 1 50%; /*При размере экрана < 992px сделать колонки шириной 50% от блока*/
         margin-bottom: 30px; /*При размере экрана < 992px сделать нижний margin на 30px*/
     }
-
 }
 @media (max-width: 680px) {
     .services__column {
         flex: 0 1 100%; /*При размере экрана < 680px сделать колонки шириной 100% от блока*/
-        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.07); /*При размере экрана < 680px поменять тень*/
         margin-bottom: 15px; /*При размере экрана < 680px сделать нижний margin на 15px*/
     }
 }
@@ -288,7 +320,11 @@ html, body {
 .item-service__green .item-service__text{
     color: #fff;
 }
-.item-service__icon {}
+.item-service__icon {
+    height: 48px;
+    display: flex;
+    align-items: flex-start;    
+}
 .item-service__title {
     font-weight: 700;
     letter-spacing: 0.1px;
@@ -303,9 +339,87 @@ html, body {
 }
 
 
+/*--------------------SECTION ADVANTAGES--------------------------------------*/
 
 
+.advantages {
+    padding: 80px 0px;
+}
+@media (max-width: 479px) {
+    .advantages {
+        padding: 50px 0px;
+    }
+}
+.advantages___container {
+}
+.advantages__headeг {
+    margin: 0px 0px 50px 0px;
 
+    /* border: 2px solid black */
+}
+@media (max-width: 992px) {
+    .advantages__headeг {
+        margin: 0px 0px 35px 0px;
+    }
+}
+@media (max-width: 479px) {
+    .advantages__headeг {
+        margin: 0px 0px 20px 0px;
+    }
+}
+.advantages__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+    
+    /* border: 5px solid red; */
+}
+.advantages__column {
+    padding: 0px 15px;
+    flex: 0 1 25% 
+}
+@media (max-width: 992px) {
+    .advantages__column {
+        flex: 0 1 50%; 
+        margin-bottom: 30px
+    }
+}
+@media (max-width: 479px) {
+    .advantages__column {
+        flex: 0 1 100%;
+        margin-bottom: 15px 
+    }
+}
+.advantages__item {
+    background-color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+}
+.advantages__item > *:not(:last-child) {
+    margin: 0px 0px 10px 0px;
+}
+.advantages__icon {
+    height: 48px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.advantages__value {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: calc(57 / 40 * 100%);
+    letter-spacing: 0.2px;
+}
+.advantages__text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(24 / 16 * 100%);
+    letter-spacing: 0.1px;
+    color: #737373;
+    /* white-space: nowrap;  */
+}
 
 
 
