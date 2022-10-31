@@ -116,6 +116,9 @@ html, body {
     font-weight: 600;
     line-height: calc(24 / 14 * 100%); 
 }
+.menu__link:hover {
+    text-decoration: underline;
+}
 @media (max-width: 479px) {
     .menu__link {
         font-size: 18px; /*увеличить шрифт с 14px до 18px при размере экрана < 767px*/
@@ -242,6 +245,7 @@ html, body {
     line-height: calc(28 / 14 * 100%);
     padding: 5px 36px;
     margin: 10px 0px;
+    transition: all 0.3s ease 0s;
 }
 @media (min-width: 479px) {
     .main-block__button:not(:last-child){
@@ -255,11 +259,20 @@ html, body {
 }
 .main-block__button_orange {
     background-color: #FF7B47;
+    border: 1px solid #ff7b47;
     color: #fff;
+}
+.main-block__button_orange:hover {
+    background-color: #fff;
+    color: #FF7B47;
 }
 .main-block__button_border {
     border: 1px solid #0D5C63;
     color: #0D5C63;
+}
+.main-block__button_border:hover {
+    background-color: #0D5C63;
+    color: #fff;
 }
 .main-block__image {
     position: absolute;
@@ -773,6 +786,11 @@ html, body {
     line-height: 200%;
     letter-spacing: 0.2px;
     color: #fff;
+    transition: all 0.3s ease 0s;
+}
+.subscribe__button:hover {
+    cursor: pointer;
+    background-color: #7c391e;
 }
 @media (max-width: 479px) {
     .subscribe__form >* {
@@ -786,6 +804,16 @@ html, body {
 
 .getintouch {
     padding: 80px 0px 130px 0px;
+}
+@media (max-width: 992px) {
+    .getintouch {
+        padding: 80px 0px 80px 0px;
+    }
+}
+@media (max-width: 467px) {
+    .getintouch {
+        padding: 80px 0px 40px 0px;
+    }
 }
 .getintouch__container {
 }
@@ -948,7 +976,146 @@ html, body {
 
 
 /*--------------------ПОДВАЛ--------------------------------------*/
-/* .footer {} */
+
+.footer {
+}
+.footer__top {
+    background-color: #17213C;
+    padding: 25px 0px; /*25px перенес на .footer__column, чтобы при адаптиве был отступ*/
+}
+.footer__main {
+}
+.footer__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -15px; /*отступ безопасности*/
+    /* border: 2px solid red; */
+}
+.footer__column {
+    flex: 0 1 16,6667%;
+    padding: 25px 15px; /*отступ безопасности*/
+    /* border: 2px solid green; */
+}
+.footer__column:last-child {
+    flex: 0 1 33,3334%;
+    /* border: 2px solid green; */
+}
+@media (max-width: 1023px) {
+    .footer__column {
+        flex: 0 1 25%;
+    }
+    .footer__column:last-child {
+        flex: 0 1 100%;
+    }
+}
+@media (max-width: 700px) {
+    .footer__column {
+        flex: 0 1 50%;
+    }
+    .footer__column:last-child {
+        flex: 0 1 100%;
+    }
+}
+
+.fotter__label {
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(24 / 16 * 100%);
+    letter-spacing: 0.1px;
+    margin: 0px 0px 20px 0px;
+}
+.fotter__menu {
+}
+.menu-footer {
+}
+.menu-footer__list {
+}
+.menu-footer__list >*:not(:last-child) {
+    margin: 0px 0px 10px 0px;
+}
+.menu-footer__item {
+}
+.menu-footer__link {
+    color: #fff;
+    font-weight: 400;
+    line-height: calc(24 / 14 * 100%);
+    letter-spacing: 0.2px;
+}
+.menu-footer__link:hover{
+    text-decoration: underline;
+}
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+}
+.contacts-footer {
+}
+.contacts-footer__item {
+    padding: 0px 0px 0px 34px;
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+    color: #fff;
+    line-height: calc(24 / 14 * 100%);
+    letter-spacing: 0.2px;
+}
+.contacts-footer__item:hover {
+    text-decoration: underline;
+}
+.contacts-footer__item:not(:last-child) {
+    margin: 0px 0px 10px 0px;
+}
+.contacts-footer__item_phone {
+    background-image: url(../img/footer/icons/01.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.contacts-footer__item_map {
+    background-image: url(../img/footer/icons/02.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.contacts-footer__item_email {
+    background-image: url(../img/footer/icons/03.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
 
 
-/* border: 5px solid red  */
+.footer__buttom {
+    padding: 25px 0px;
+}
+.footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.footer__copy {
+    color: #737373;
+    line-height: calc(24 / 14 * 100%);
+    letter-spacing: 0.2px;
+}
+.footer__social {
+}
+.social {
+    display: flex;
+    align-items: center;
+}
+.social__item {
+
+}
+.social__item:not(:last-child) {
+    margin: 0px 20px 0px 0px;
+}
+
+@media (max-width: 767px) {
+    .footer__container {
+        flex-direction: column;
+    }
+    .footer__copy {
+        text-align: center;
+        margin: 0px 0px 10px 0px;
+    }
+}
