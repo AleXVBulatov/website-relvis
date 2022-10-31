@@ -146,6 +146,11 @@ html, body {
 }
 .page__subscribe {    
 }
+.page__getintouch {
+}
+.page__contact {
+}
+
 
 /*--------------------HEADER-BLOCK--------------------------------------*/
 
@@ -664,7 +669,7 @@ html, body {
 }
 
 
-/*--------------------SECTION --------------------------------------*/
+/*--------------------SECTION SUBSCRIBE--------------------------------------*/
 
 
 .subscribe {
@@ -776,8 +781,170 @@ html, body {
 }
 
 
+/*--------------------SECTION GETINTOUCH--------------------------------------*/
 
 
+.getintouch {
+    padding: 80px 0px 130px 0px;
+}
+.getintouch__container {
+}
+.getintouch__header {
+    margin: 0px 0px 80px 0px;
+}
+@media (max-width: 992px) {
+    .getintouch__header {
+        margin: 0px 0px 40px 0px;
+    }
+}
+.getintouch__items {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 992px) {
+    .getintouch__items {
+        display: block;
+        margin: 0 -15px;
+    }
+}
+.getintouch__item {
+    flex: 0 1 33.333%;
+}
+.item-getintouch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 50px 40px;
+}
+.item-getintouch >*:not(:last-child){
+    margin: 0px 0px 15px 0px;
+} 
+.item-getintouch_active {
+    background-color: #252B42;
+    color: #fff;
+    padding: 80px 40px;
+}
+@media (max-width: 992px) {
+    .item-getintouch_active {
+        padding: 50px 40px;
+    }
+}
+@media (max-width: 479px) {
+    .item-getintouch {
+        padding: 25px 40px;
+    }
+    .item-getintouch_active {
+        padding: 25px 40px;
+    }
+}
+.item-getintouch__icon {
+}
+.item-getintouch__emails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item-getintouch__email {
+    color: inherit;
+    font-weight: 600;
+    line-height: calc(24 / 14 * 100%);
+    letter-spacing: 0.2px;
+}
+.item-getintouch__email:hover {
+    text-decoration: underline;
+}
+.item-getintouch__label {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(24 / 16 *100%);
+    letter-spacing: 0.1px;
+}
+.item-getintouch__button {
+    border: 1px solid #ff7b47;
+    border-radius: 5px;
+    min-height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 600;
+    line-height: calc(24 / 14 * 100%);
+    letter-spacing: 0.2px;
+    color: #ff7b47;
+    transition: all 0.3s ease 0s;
+}
+.item-getintouch_active .item-getintouch__button {
+    border: 1px solid #fff;
+    color: #fff;
+}
+.item-getintouch__button:hover {
+    background-color: #ff7b47;
+    border: 1px solid #ff7b47;
+    color: #fff;
+}
+
+/*--------------------SECTION CONTACT--------------------------------------*/
+
+.contact {
+    background-color: #fff;
+    padding: 42px 0px;
+}
+.contact__container {
+}
+.contact__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact__content {
+    padding: 0px 20px 0px 0px;
+}
+@media (max-width: 767px) {
+    .contact__body {
+        display: block;      
+    }
+    .contact__content:not(:last-child) {
+        margin: 0px 0px 20px 0px;
+    }
+}
+.contact__title {
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    font-size: 24px;
+    line-height: calc(32 / 24 * 100%);
+    letter-spacing: 0.1px;
+}
+.contact__title:not(:last-child) {
+    margin: 0px 0px 10px 0px;
+}
+.contact__text {
+    color: #737373;
+    line-height: calc(20 / 14 * 100%);
+    letter-spacing: 0.2px;   
+}
+.contact__button {
+    display: flex;
+    background-color: #ff7b47;
+    border-radius: 5px;
+    min-height: 58px;
+    padding: 5px 40px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(28 / 14 * 100%);
+    letter-spacing: 0.2px;
+    transition: background-color 0.3s ease 0s;
+
+}
+.contact__button:hover {
+    background-color: #7c391e;
+}
 
 
 /*--------------------ПОДВАЛ--------------------------------------*/
