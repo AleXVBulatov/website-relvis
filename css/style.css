@@ -76,12 +76,14 @@ html, body {
 @media (max-width: 479px) {
     .header__container {
         min-height: 70px; /*При ширине экрана < 479px уменьшить высоту header с 104px до 70px*/
+        /* border: 1px solid yellow */
     }
 }
 .header__logo {
     font-size: 24px;
     font-weight: 700;
-    color:inherit; /*т.к. ссылки по умолчанию не наслудеют цвет*/
+    color: inherit; /*т.к. ссылки по умолчанию не наслудеют цвет*/
+    /* border: 1px solid red */
 }
 .header__menu {
     margin-left: 133px; /* по БЭМ (Блок, Элемент, Модификатор) устанавливать сюда, а не в menu, хоть это одно и то же*/
@@ -122,7 +124,8 @@ html, body {
 @media (max-width: 479px) {
     .menu__link {
         font-size: 18px; /*увеличить шрифт с 14px до 18px при размере экрана < 767px*/
-        color: #535353 /*При размере экрана < 479px сделать цвет текста темнее*/
+        /*color: #535353 /*При размере экрана < 479px сделать цвет текста темнее*/
+        color: #FF7B47; /*При размере экрана < 479px сделать цвет текста темнее*/
     } 
 }
 
@@ -130,34 +133,20 @@ html, body {
 
 @media (max-width: 479px) {
     .header__container {
-            
+        padding-top: 20px;
+        align-items: flex-start;            
     } 
-    .header__logo {
-        /* order: 3; */
-    }    
-    .header__menu {
-        /* order: 2 */
-    }
-       
     .menu__list {
         flex-direction: column;
-
         align-items: flex-end;
-        margin-left: 50%;
+        margin-left: 100%;
+        margin-top: 25px;
+        position: absolute;
+        right: 0px;
         /* border: 1px solid blue */
     }
     .menu__item {
         margin: 0px 20px 0px 0px
-    }
-    
-    .menu__item:not(:last-child) {
-        /*margin: 0px 21px 0px 0px; /*Убрать отступ справа у последнего элемента*/
-    }
-    .menu__link {
-        color: #737373;
-        font-weight: 600;
-        line-height: calc(24 / 14 * 100%); 
-        /* border: 1px solid green */
     }
 }
 
@@ -165,7 +154,6 @@ html, body {
 .gamburger-menu {
     margin-left: auto;
 }
-
 .gamburger-menu__button {
     position: relative;
 
@@ -178,9 +166,6 @@ html, body {
     width: 30px;
     height: 20px;
     cursor: pointer;
-
-    /* border: 1px solid red; */
-    /* order: 1 */
 }
 .gamburger-menu__button > span,
 .gamburger-menu__button > span::before,
@@ -191,7 +176,7 @@ html, body {
     height: 100%;
     width: 100%;
     height: 2px;
-    background-color: #616161;
+    background-color: #737373;
     transition-duration: .25s; 
 }
 .gamburger-menu__button > span::before{
@@ -305,7 +290,7 @@ html, body {
 }
 @media (max-width: 992px) {
     .main-block__body {
-        padding: 120px 0px 191px 0px; /*При размере экрана < 992px уменьшить отступ с 184px до 120px*/
+        padding: 120px 0 191px 0px; /*При размере экрана < 992px уменьшить отступ с 184px до 120px*/
     }
 }
 .main-block__title {
