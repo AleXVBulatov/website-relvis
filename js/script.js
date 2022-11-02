@@ -27,11 +27,11 @@ menuBtnRef.addEventListener("click", (event) => {
   if (event.target === menuBtnRef || event.target.nodeName === "SPAN") {
     menuRef.classList.toggle("js_nuv-active");
     menuBtnRef.classList.toggle("js_btn-close");
-    if (menuRef.classList.contains("js_nuv-active")) {
-      mainBlockRef.style.paddingTop = "120px";      
-    } else {
-      mainBlockRef.style.paddingTop = "200px";
-    };
+    // if (menuRef.classList.contains("js_nuv-active")) { // код для изменения отступа при открытии меню
+    //   mainBlockRef.style.paddingTop = "120px";      
+    // } else {
+    //   mainBlockRef.style.paddingTop = "200px";
+    // };
   };
 });
 

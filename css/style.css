@@ -288,11 +288,6 @@ html, body {
 .main-block__body > *:not(:last-child) { /*установили отступ снизу ко всем элементам первого уровня вложенности, кроме последнего элемента*/
     margin: 0px 0px 35px 0px;
 }
-@media (max-width: 992px) {
-    .main-block__body {
-        padding: 120px 0 191px 0px; /*При размере экрана < 992px уменьшить отступ с 184px до 120px*/
-    }
-}
 .main-block__title {
     font-size: 58px;
     line-height: calc(80 / 58 * 100%);
